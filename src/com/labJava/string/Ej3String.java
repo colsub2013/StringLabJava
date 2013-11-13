@@ -2,6 +2,8 @@ package com.labJava.string;
 
 import java.util.Date;
 
+import com.labJava.constantes.Constantes;
+
 /*
  	
  	Ejercicio 3:
@@ -19,18 +21,21 @@ import java.util.Date;
  
  */
 
-public class Ej3String {
+public class Ej3String implements Constantes {
 
+	
 	public static void main(String[] args) {
-		
-		int cantidad = 1000000;
-		
-//		procesarStringBuilder(cantidad); 
-		
-//		procesarStringStringBuffer(cantidad);
 
-		procesarString(cantidad);
-	    
+		int cantidad = 1000000;
+
+		if(args[0].equals(Tipos.STRING.getTipo())) {
+			procesarString(cantidad);
+		} else if(args[0].equals(Tipos.STRINGBUFFER.getTipo())) {
+			procesarStringStringBuffer(cantidad);			
+		} else {
+			System.out.println("La opción seleccionada no está disponible");
+		}
+
 	}
 	
 	

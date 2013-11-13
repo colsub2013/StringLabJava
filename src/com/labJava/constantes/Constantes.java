@@ -1,6 +1,22 @@
 package com.labJava.constantes;
 
 public interface Constantes {
+	
+	public enum Tipos {
+		STRING("Str"),
+		STRINGBUFFER("Strbf"),
+		STRINGBUILDER("Strbl");
+	
+		private final String tipo;
+		
+		private Tipos(String t) { tipo = t;}
+		
+		public String getTipo() {
+			return tipo;
+		}
+	
+	};
+
 
 	public enum MESES {enero, febrero, marzo, abril, mayo, junio, julio, agosto, setiembre, octubre};
 	
